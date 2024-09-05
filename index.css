@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "vazir", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url(Font/Vazir.ttf);
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  border-radius: 5px 5px 0 0;
+  height: 120px;
+  background-color: #989898;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slope {
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+}
+
+.slope-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.car {
+  position: absolute;
+  animation: none;
+  transition: transform 0.3s linear;
+  bottom: -5%;
+  left: 0;
+}
+
+.car-image {
+  width: 40%;
+  max-width: 300px;
+}
+
+.wheels {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 68%;
+}
+
+.wheel {
+  width: 10%;
+  height: 10%;
+  background-color: black;
+  border-radius: 50%;
+  transition: transform 0.8s ease-in-out;
+  position: relative;
+  transform-origin: center;
+  animation: none;
+}
+
+.front-wheel {
+  margin-left: auto;
+  left: -21%;
+}
+
+.back-wheel {
+  margin-right: auto;
+  left: -65%;
+}
+
+.scroll-text {
+  position: absolute;
+  bottom: 15px;
+  left: 30%;
+  opacity: 0;
+  transform: translateX(-30%) rotate(-15deg);
+  transition: opacity 0.5s ease;
+  font-size: 18px;
+  color: white;
+  z-index: 10;
+}
+
+.tap-text {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  opacity: 0;
+  padding: 5px;
+  transition: opacity 0.5s ease;
+  border-radius: 2px;
+  font-size: 8px;
+  background-color: rgba(222, 223, 223, 0.822);
+  color: #000293;
+  z-index: 10;
+}
+
+.content {
+  height: 200vh;
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .car-image {
+    width: 40%;
+  }
+
+  .wheel {
+    width: 10%;
+    height: 8%;
+  }
+
+  .scroll-text,
+  .tap-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .car-image {
+    width: 50%;
+  }
+
+  .wheel {
+    width: 12%;
+    height: 10%;
+  }
+
+  .scroll-text,
+  .tap-text {
+    font-size: 14px;
+  }
+}
